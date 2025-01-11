@@ -1,9 +1,8 @@
-"use client";
-
+import { Suspense } from "react";
 import Link from "next/link";
 import BuildersCheckInCount from "./_components/BuildersCheckInCount";
 import type { NextPage } from "next";
-import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { ArrowPathIcon, BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +14,9 @@ const Home: NextPage = () => {
             <span className="block text-4xl font-bold">Batch 12</span>
           </h1>
           <p className="text-center text-lg">Get started by taking a look at your batch GitHub repository.</p>
-          <BuildersCheckInCount />
+          <Suspense fallback={<LoadingCounter />}>
+            <BuildersCheckInCount />
+          </Suspense>
         </div>
 
         <div className="flex-grow bg-base-300 w-full mt-16 px-8 py-12">
@@ -48,3 +49,11 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+function LoadingCounter() {
+  return (
+    <div className="text-lg flex gap-2 justify-center items-center">
+      <span className="font-bold">Checked in builders count:</span>
+      <ArrowPathIcon className="size-5 animate-spin" />
+    </div>
+  );
+}
