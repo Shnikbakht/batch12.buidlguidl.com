@@ -7,70 +7,93 @@ import { SiFarcaster } from "react-icons/si";
 import { TbPlant2 } from "react-icons/tb";
 import { Address } from "~~/components/scaffold-eth";
 
+interface SocialMediaIconProps {
+  href: string;
+  ariaLabel: string;
+  icon: React.ReactNode;
+  hoverColor: string;
+}
+
+function SocialMediaIcon({ href, ariaLabel, icon, hoverColor }: SocialMediaIconProps) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={ariaLabel}
+      className={`text-gray-800 dark:text-white transition ${hoverColor}`}
+    >
+      {icon}
+    </a>
+  );
+}
+
+const socialMediaLinks = [
+  {
+    href: "https://github.com/ludmila-omlopes",
+    ariaLabel: "GitHub",
+    icon: <FaGithub size={24} />,
+    hoverColor: "hover:text-blue-500 dark:hover:text-blue-300",
+  },
+  {
+    href: "https://lens.xyz/u/definn",
+    ariaLabel: "Lens",
+    icon: <TbPlant2 size={24} />,
+    hoverColor: "hover:text-green-500 dark:hover:text-green-300",
+  },
+  {
+    href: "https://twitter.com/DeFinnTheFarmer",
+    ariaLabel: "Twitter",
+    icon: <FaTwitter size={24} />,
+    hoverColor: "hover:text-blue-400 dark:hover:text-blue-300",
+  },
+  {
+    href: "https://warpcast.com/definn.eth",
+    ariaLabel: "Farcaster",
+    icon: <SiFarcaster size={24} />,
+    hoverColor: "hover:text-purple-500 dark:hover:text-purple-300",
+  },
+];
+
 const LudmilaProfile: NextPage = () => {
   const address = "0xC3b8BBD76c78a0dFAf47b4454472DB35cEBD1A24";
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-100 via-blue-100 to-purple-100 dark:from-gray-800 dark:via-purple-900 dark:to-blue-900 flex flex-col items-center">
-      <div className="w-full max-w-4xl bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 mt-10">
-        <div className="flex items-center space-x-6">
-          <div className="avatar">
-            <Image
-              src="https://avatars.githubusercontent.com/u/16783967"
-              alt="@ludmila-omlopes"
-              width={100}
-              height={100}
-              className="rounded-full ring ring-primary"
-            />
+      <div className="w-full max-w-4xl bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 mt-10 relative">
+        <div className="flex items-start">
+          <div className="flex-1 flex items-center space-x-6">
+            <div className="avatar">
+              <Image
+                src="https://avatars.githubusercontent.com/u/16783967"
+                alt="@ludmila-omlopes"
+                width={100}
+                height={100}
+                className="rounded-full ring ring-primary"
+              />
+            </div>
+            <div>
+              <h1 className="text-3xl font-bold">Ludmila Lopes (DeFinn)</h1>
+              <Address address={address} />
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">🌟 Professional Generalist</p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-2xl font-bold">@ludmila-omlopes</h1>
-            <Address address={address} />
-            <p className="text-sm text-gray-600 dark:text-gray-400">🌟 Professional Generalist</p>
+          {/* Social Media Icons */}
+          <div className="top-0 right-0 flex flex-col items-center gap-2">
+            {socialMediaLinks.map((link, index) => (
+              <SocialMediaIcon
+                key={index}
+                href={link.href}
+                ariaLabel={link.ariaLabel}
+                icon={link.icon}
+                hoverColor={link.hoverColor}
+              />
+            ))}
           </div>
-        </div>
-        <div className="flex mt-4 gap-4">
-          <a
-            href="https://github.com/ludmila-omlopes"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-800 dark:text-white hover:text-blue-500 dark:hover:text-blue-300 transition"
-            aria-label="GitHub"
-          >
-            <FaGithub size={24} />
-          </a>
-          <a
-            href="https://hey.xyz/u/definn"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-800 dark:text-white hover:text-green-500 dark:hover:text-green-300 transition"
-            aria-label="Lens"
-          >
-            <TbPlant2 size={24} />
-          </a>
-          <a
-            href="https://twitter.com/DeFinnTheFarmer"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-800 dark:text-white hover:text-blue-400 dark:hover:text-blue-300 transition"
-            aria-label="Twitter"
-          >
-            <FaTwitter size={24} />
-          </a>
-          <a
-            href="https://warpcast.com/definn.eth"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-800 dark:text-white hover:text-purple-500 dark:hover:text-purple-300 transition"
-            aria-label="Farcaster"
-          >
-            <SiFarcaster size={24} />
-          </a>
         </div>
       </div>
 
-      {/* About Section */}
-      <div className="w-full max-w-4xl bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 mt-6">
+      <div className="w-full max-w-4xl bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 mt-6 text-left">
         <h2 className="text-lg font-semibold mb-2">About Me</h2>
         <p>
           I&apos;m Ludmila, a Brazilian woman and primarily a <strong>developer</strong> but also with experience in
