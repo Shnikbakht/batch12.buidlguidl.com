@@ -11,7 +11,6 @@ const INFO = {
   role: "Full Stack Developer",
   address: "0x845D62b5405aAAe6b95CF3fbf33968A1E71a9cAD",
   avatar: "https://avatars.githubusercontent.com/u/81520363",
-  tagline: "Love decentralization, simplicity and Mom",
   links: {
     bg: "https://app.buidlguidl.com/builders/0x845D62b5405aAAe6b95CF3fbf33968A1E71a9cAD",
     github: "https://github.com/DimaKush",
@@ -22,6 +21,13 @@ const INFO = {
   currentWork: "Building weird stuff and exploring Web3 possibilities",
   vision: "Contributing to the better future through decentralized technologies and simple solutions",
 } as const;
+
+const SOCIAL_LINKS = [
+  { href: INFO.links.github, Icon: GithubIcon },
+  { href: INFO.links.twitter, Icon: TwitterIcon },
+  { href: INFO.links.telegram, Icon: TelegramIcon },
+  { href: INFO.links.bg, Icon: BuidlGuidlLogo },
+] as const;
 
 const DimaKushProfile: NextPage = () => {
   return (
@@ -78,38 +84,17 @@ const DimaKushProfile: NextPage = () => {
               <div className="bg-base-200 rounded-xl p-6">
                 <h2 className="text-2xl font-bold mb-4">Connect</h2>
                 <div className="flex items-center gap-8">
-                  <a
-                    href={INFO.links.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:opacity-80 transition-opacity"
-                  >
-                    <GithubIcon className="h-10 w-10" />
-                  </a>
-                  <a
-                    href={INFO.links.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:opacity-80 transition-opacity"
-                  >
-                    <TwitterIcon className="h-10 w-10" />
-                  </a>
-                  <a
-                    href={INFO.links.telegram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:opacity-80 transition-opacity"
-                  >
-                    <TelegramIcon className="h-10 w-10" />
-                  </a>
-                  <a
-                    href={INFO.links.bg}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:opacity-80 transition-opacity"
-                  >
-                    <BuidlGuidlLogo className=" h-10 w-10" />
-                  </a>
+                  {SOCIAL_LINKS.map(({ href, Icon }) => (
+                    <a
+                      key={href}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:opacity-80 transition-opacity"
+                    >
+                      <Icon className="h-10 w-10" />
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
