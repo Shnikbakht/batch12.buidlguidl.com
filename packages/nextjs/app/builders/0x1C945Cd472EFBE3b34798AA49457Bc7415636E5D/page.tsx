@@ -1,14 +1,28 @@
 import Image from "next/image";
 import { NextPage } from "next";
+import { FaMediumM } from "react-icons/fa";
+import { FaGithub, FaXTwitter } from "react-icons/fa6";
 import { Address } from "~~/components/scaffold-eth";
 
 const obahProfile: NextPage = () => {
   const address = "0x1C945Cd472EFBE3b34798AA49457Bc7415636E5D";
 
   const socialLinks = [
-    { name: "github", link: "https://github.com/obah" },
-    { name: "x", link: "https://x.com/oba_ddev" },
-    { name: "medium", link: "https://medium.com/@olusojiobah/" },
+    {
+      name: "github",
+      link: "https://github.com/obah",
+      icon: <FaGithub />,
+    },
+    {
+      name: "x",
+      link: "https://x.com/oba_ddev",
+      icon: <FaXTwitter />,
+    },
+    {
+      name: "medium",
+      link: "https://medium.com/@olusojiobah/",
+      icon: <FaMediumM />,
+    },
   ] as const;
 
   return (
@@ -42,14 +56,8 @@ const obahProfile: NextPage = () => {
 
           <div className="flex gap-4 items-center">
             {socialLinks.map(item => (
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary capitalize w-24 btn-sm font-normal gap-1"
-                key={item.link}
-              >
-                {item.name}
+              <a href={item.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary" key={item.link}>
+                {item.icon}
               </a>
             ))}
           </div>
