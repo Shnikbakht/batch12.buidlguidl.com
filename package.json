@@ -53,5 +53,8 @@
   },
   "engines": {
     "node": ">=18.18.0"
+  },
+  "dependencies": {
+    "lucide-react": "^0.471.1"
   }
 }
