@@ -8,7 +8,7 @@ const JerlyPage: NextPage = () => {
   const address = "0xB450c1139958772EE65F54F4907e6aCDc7466a4D";
 
   const bio =
-    "I am a Web3/frontend developer and product designer, building blockchain solutions and questing to improve web3 UX challenges. Nice to meet you&apos;s!!!";
+    "I am a Web3/frontend developer and product designer, building blockchain solutions and questing to improve web3 UX challenges. Nice to meet you!!!";
 
   const profileImgUrl =
     "https://avatars.githubusercontent.com/u/15064313?s=400&u=94ee737cf97deb7ac721429f05ce5aeeba13fbee&v=4";
@@ -37,7 +37,7 @@ const JerlyPage: NextPage = () => {
         </div>
 
         <div className="flex flex-col justify-center p-6 bg-white">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center">Let&apos;s Connect</h2>
+          <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center">Connect</h2>
           <div className="flex flex-col items-center gap-4">
             {socials.map(social => (
               <a
