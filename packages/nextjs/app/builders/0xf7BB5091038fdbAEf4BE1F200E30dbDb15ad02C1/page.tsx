@@ -9,8 +9,8 @@ const ProfileInfo = {
   avatar: "/nnadipeter.png",
   links: {
     github: "https://github.com/peternnadi1999",
-    twitter: "https://twitter.com/janedoe",
-    linkedin: "https://linkedin.com/in/janedoe",
+    twitter: "https://twitter.com/PeterNnadi7",
+    linkedin: "https://linkedin.com/in/nnadi-peter-emeka",
   },
   skills: ["Smart Contracts", "Solidity", "React.js", "Javascript", "Ethereum"],
 };
