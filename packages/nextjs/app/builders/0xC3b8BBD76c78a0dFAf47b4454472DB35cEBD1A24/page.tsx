@@ -36,7 +36,7 @@ const socialMediaLinks = [
     hoverColor: "hover:text-blue-500 dark:hover:text-blue-300",
   },
   {
-    href: "https://lens.xyz/u/definn",
+    href: "https://hey.xyz/u/definn",
     ariaLabel: "Lens",
     icon: <TbPlant2 size={24} />,
     hoverColor: "hover:text-green-500 dark:hover:text-green-300",
