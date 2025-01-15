@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { type NextPage } from "next";
 
-const ProfilePage: NextPage = () => {
+const ShahlaNikbakht_ProfilePage: NextPage = () => {
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row">
@@ -84,4 +84,4 @@ const ProfilePage: NextPage = () => {
   );
 };
 
-export default ProfilePage;
+export default ShahlaNikbakht_ProfilePage;
