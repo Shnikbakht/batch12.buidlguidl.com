@@ -4,21 +4,32 @@ import type { NextPage } from "next";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Address } from "~~/components/scaffold-eth";
 
+const address = "0xB450c1139958772EE65F54F4907e6aCDc7466a4D";
+
+const bio =
+  "I am a Web3/frontend developer and product designer, building blockchain solutions and questing to improve web3 UX challenges. Nice to meet you!!!";
+
+const profileImgUrl =
+  "https://avatars.githubusercontent.com/u/15064313?s=400&u=94ee737cf97deb7ac721429f05ce5aeeba13fbee&v=4";
+
+const socials = [
+  { name: "Twitter", url: "https://twitter.com/jeremiahdsamuel", icon: <FaTwitter className="text-blue-500" /> },
+  { name: "LinkedIn", url: "https://linkedin.com/in/jeremiahsamuel", icon: <FaLinkedin className="text-blue-700" /> },
+  { name: "GitHub", url: "https://github.com/livinalt", icon: <FaGithub className="text-gray-500" /> },
+  {
+    name: "Hashnode",
+    url: "https://hashnode.com/@jeremiahsamuel",
+    icon: (
+      <img
+        src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611902473383/CDyAuTy75.png"
+        alt="Hashnode Icon"
+        className="w-6 h-6"
+      />
+    ),
+  },
+];
+
 const JerlyPage: NextPage = () => {
-  const address = "0xB450c1139958772EE65F54F4907e6aCDc7466a4D";
-
-  const bio =
-    "I am a Web3/frontend developer and product designer, building blockchain solutions and questing to improve web3 UX challenges. Nice to meet you!!!";
-
-  const profileImgUrl =
-    "https://avatars.githubusercontent.com/u/15064313?s=400&u=94ee737cf97deb7ac721429f05ce5aeeba13fbee&v=4";
-
-  const socials = [
-    { name: "Twitter", url: "https://twitter.com/jeremiahdsamuel", icon: <FaTwitter className="text-blue-500" /> },
-    { name: "LinkedIn", url: "https://linkedin.com/in/jeremiahsamuel", icon: <FaLinkedin className="text-blue-700" /> },
-    { name: "GitHub", url: "https://github.com/livinalt", icon: <FaGithub className="text-gray-500" /> },
-  ];
-
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-gray-900 dark:text-gray-100 p-6">
       <div className="max-w-4xl w-full bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
