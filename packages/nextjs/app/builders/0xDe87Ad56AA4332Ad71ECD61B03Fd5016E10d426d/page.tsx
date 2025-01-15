@@ -11,7 +11,7 @@ const ShahlaNikbakht_ProfilePage: NextPage = () => {
         {/* Profile Picture */}
         <div className="w-40 h-40 mx-auto lg:mx-0 rounded-full shadow-2xl overflow-hidden">
           <Image
-            src="/ShahlaNikbakht-profile-picture.jpg" // Ensure this file is in the public directory
+            src="/profile-picture-0xDe87Ad56AA4332Ad71ECD61B03Fd5016E10d426d.jpg" // Ensure this file is in the public directory
             alt="Shahla Nikbakht"
             width={160}
             height={160}
