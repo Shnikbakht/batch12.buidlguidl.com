@@ -12,21 +12,32 @@ const bio =
 const profileImgUrl =
   "https://avatars.githubusercontent.com/u/15064313?s=400&u=94ee737cf97deb7ac721429f05ce5aeeba13fbee&v=4";
 
+const HashnodeIcon: React.FC = () => (
+  <Image
+    src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611902473383/CDyAuTy75.png"
+    alt="Hashnode Icon"
+    width={24}
+    height={24}
+    className="w-6 h-6"
+  />
+);
+
 const socials = [
   { name: "Twitter", url: "https://twitter.com/jeremiahdsamuel", icon: <FaTwitter className="text-blue-500" /> },
   { name: "LinkedIn", url: "https://linkedin.com/in/jeremiahsamuel", icon: <FaLinkedin className="text-blue-700" /> },
   { name: "GitHub", url: "https://github.com/livinalt", icon: <FaGithub className="text-gray-500" /> },
-  {
-    name: "Hashnode",
-    url: "https://hashnode.com/@jeremiahsamuel",
-    icon: (
-      <img
-        src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611902473383/CDyAuTy75.png"
-        alt="Hashnode Icon"
-        className="w-6 h-6"
-      />
-    ),
-  },
+  { name: "Hashnode", url: "https://hashnode.com/@jeremiahsamuel", icon: <HashnodeIcon /> },
+  // {
+  //   name: "Hashnode",
+  //   url: "https://hashnode.com/@jeremiahsamuel",
+  //   icon: (
+  //     <image
+  //       src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611902473383/CDyAuTy75.png"
+  //       alt="Hashnode Icon"
+  //       className="w-6 h-6"
+  //     />
+  //   ),
+  // },
 ];
 
 const JerlyPage: NextPage = () => {
