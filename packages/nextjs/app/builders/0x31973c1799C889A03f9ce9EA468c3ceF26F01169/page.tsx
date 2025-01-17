@@ -31,7 +31,7 @@ const BuilderProfile: NextPage = () => {
       <SectionTitle title="Socials" />
       <div className="flex gap-x-4">
         {SOCIALS.map(({ href, Icon, title }) => (
-          <a key={href} href={href} rel="noreferrer" title={title}>
+          <a key={href} href={href} target="_blank" rel="noreferrer" title={title}>
             <Icon className="size-6 dark:hover:text-gray-400 hover:text-primary" />
           </a>
         ))}
@@ -43,6 +43,7 @@ const BuilderProfile: NextPage = () => {
         <a
           className="font-bold underline bg-gradient-to-r from-[#6600AC] to-[#FF6F5B] text-transparent bg-clip-text"
           href="https://zharta.io"
+          target="_blank"
           rel="noreferrer"
           title="Zharta"
         >
