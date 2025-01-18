@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import hashnodeIcon from "../../../public/hashnode-Icon.png";
 import type { NextPage } from "next";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Address } from "~~/components/scaffold-eth";
@@ -19,15 +20,7 @@ const socials = [
   {
     name: "Hashnode",
     url: "https://hashnode.com/@jeremiahsamuel",
-    icon: (
-      <Image
-        src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611902473383/CDyAuTy75.png"
-        alt="Hashnode Icon"
-        width={24}
-        height={24}
-        className="w-6 h-6"
-      />
-    ),
+    icon: <Image src={hashnodeIcon} alt="Hashnode Icon" width={24} height={24} className="w-6 h-6" />,
   },
 ];
 
