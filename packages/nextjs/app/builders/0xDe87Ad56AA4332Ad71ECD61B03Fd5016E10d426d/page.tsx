@@ -2,7 +2,10 @@ import Image from "next/image";
 import { type NextPage } from "next";
 import { BuidlGuidlLogo } from "~~/components/assets/BuidlGuidlLogo";
 import { GithubIcon } from "~~/components/assets/GithubIcon";
+import { LinkedinIcon } from "~~/components/assets/LinkedinIcon";
 import { TelegramIcon } from "~~/components/assets/TelegramIcon";
+
+// Add this if you have a LinkedIn icon
 
 const ShahlaNikbakht_ProfilePage: NextPage = () => {
   return (
@@ -61,6 +64,16 @@ const ShahlaNikbakht_ProfilePage: NextPage = () => {
               aria-label="BuidlGuidl"
             >
               <BuidlGuidlLogo className="w-8 h-8 hover:text-blue-500" />
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/shahlanikbakht/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <LinkedinIcon className="w-8 h-8 hover:text-blue-500" />
             </a>
           </div>
         </div>
